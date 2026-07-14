@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/lasne/:path*", "has": [{ "type": "host", "value": "kinovea.be" }], "destination": "https://lasne.kinovea.be/:path*", "permanent": true },
+    { "source": "/rhode/:path*", "has": [{ "type": "host", "value": "kinovea.be" }], "destination": "https://rhode.kinovea.be/:path*", "permanent": true },
+    { "source": "/kraainem/:path*", "has": [{ "type": "host", "value": "kinovea.be" }], "destination": "https://kraainem.kinovea.be/:path*", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "lasne.kinovea.be" }], "destination": "/lasne/:path*" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "rhode.kinovea.be" }], "destination": "/rhode/:path*" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "kraainem.kinovea.be" }], "destination": "/kraainem/:path*" }
+  ]
+}

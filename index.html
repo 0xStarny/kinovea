@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinovea | Kinésithérapie &amp; Bien-être — Lasne · Rhode-Saint-Genèse · Kraainem</title>
+<meta name="description" content="Kinovea Medical Centers — cabinets de kinésithérapie et bien-être à Lasne, Rhode-Saint-Genèse et Kraainem. Choisissez votre cabinet.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="canonical" href="https://kinovea.be/">
+<meta property="og:title" content="Kinovea | Kinésithérapie &amp; Bien-être">
+<meta property="og:description" content="Trois cabinets à votre service : Lasne, Rhode-Saint-Genèse et Kraainem.">
+<meta property="og:url" content="https://kinovea.be/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Kinovea Medical Centers",
+  "url": "https://kinovea.be",
+  "telephone": "+32497243933",
+  "department": [
+    {"@type":"Physiotherapy","name":"Kinovea Lasne","address":{"@type":"PostalAddress","streetAddress":"Route de l'Etat 331/A","postalCode":"1380","addressLocality":"Lasne","addressCountry":"BE"}},
+    {"@type":"Physiotherapy","name":"Kinovea Rhode-Saint-Genèse","address":{"@type":"PostalAddress","streetAddress":"Rue des iris 2/bte 2","postalCode":"1640","addressLocality":"Rhode-Saint-Genèse","addressCountry":"BE"}},
+    {"@type":"Physiotherapy","name":"Kinovea Kraainem","address":{"@type":"PostalAddress","streetAddress":"Rue Jef Thumas 2","postalCode":"1950","addressLocality":"Kraainem","addressCountry":"BE"}}
+  ]
+}
+</script>
+<style>
+:root{
+  --paper:#FAF7EF;
+  --card:#FFFDF8;
+  --ink:#23301F;
+  --ink-soft:#5B6B54;
+  --line:rgba(35,48,31,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  display:flex;flex-direction:column;
+  min-height:100vh;
+}
+header{
+  display:flex;flex-direction:column;align-items:center;gap:.3rem;
+  padding:1.4rem 1rem 1.05rem;
+  border-bottom:1px solid var(--line);
+}
+header img{height:56px;width:auto}
+header p{
+  font-family:'Fraunces',serif;font-size:.92rem;color:var(--ink-soft);
+  font-style:italic;letter-spacing:.02em;
+}
+main{flex:1;display:flex;min-height:0}
+.panel{
+  position:relative;
+  flex:1 1 0;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:2.2rem 2.2rem 2.4rem;
+  text-decoration:none;color:var(--paper);
+  overflow:hidden;
+  background-image:var(--photo);
+  background-size:cover;
+  background-position:center;
+  transition:flex .6s cubic-bezier(.4,0,.2,1), filter .45s ease;
+}
+.panel::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background:linear-gradient(180deg,
+    rgba(0,0,0,.18) 0%,
+    var(--tint-mid) 55%,
+    var(--tint-deep) 100%);
+}
+.panel::after{
+  content:"";position:absolute;inset:0;z-index:0;
+  background:var(--tint-full);
+  opacity:0;transition:opacity .5s ease;
+}
+.panel > *{position:relative;z-index:1}
+.p-lasne{
+  --accent:#86C24A; --accent-deep:#1F5449;
+  --tint-mid:rgba(31,84,73,.38); --tint-deep:rgba(20,52,45,.92); --tint-full:rgba(24,62,54,.88);
+  --photo:url('assets/hero-lasne.jpg');
+}
+.p-rhode{
+  --accent:#E8A24C; --accent-deep:#8A400F;
+  --tint-mid:rgba(138,64,15,.34); --tint-deep:rgba(82,38,9,.92); --tint-full:rgba(96,45,11,.88);
+  --photo:url('assets/hero-rhode.jpg');
+}
+.p-kraainem{
+  --accent:#5AA8E0; --accent-deep:#16406E;
+  --tint-mid:rgba(22,64,110,.34); --tint-deep:rgba(13,38,66,.92); --tint-full:rgba(17,48,82,.88);
+  --photo:url('assets/hero-kraainem.jpg');
+}
+.panel .num{
+  font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.28em;
+  color:var(--accent);margin-bottom:.8rem;text-transform:uppercase;
+}
+.panel h2{
+  font-family:'Fraunces',serif;font-weight:500;
+  font-size:clamp(1.8rem,2.9vw,2.8rem);
+  line-height:1.08;
+  text-shadow:0 2px 22px rgba(0,0,0,.45);
+}
+.panel .bar{
+  width:46px;height:3px;border-radius:2px;background:var(--accent);
+  margin:.8rem 0 .75rem;
+  transition:width .5s ease;
+}
+.panel:hover .bar{width:82px}
+.panel .addr{
+  font-size:.92rem;color:rgba(255,255,255,.88);line-height:1.55;
+  text-shadow:0 1px 12px rgba(0,0,0,.5);
+}
+.panel .hint{
+  margin-top:1.5rem;
+  display:inline-flex;align-items:center;gap:.5rem;width:max-content;
+  font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;
+  border:1.5px solid rgba(255,255,255,.55);border-radius:99px;
+  padding:.55rem 1.05rem;
+  transition:opacity .25s ease;
+}
+.reveal{
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .6s cubic-bezier(.4,0,.2,1), opacity .45s ease .12s, margin .6s ease;
+  margin-top:0;
+}
+.reveal .team-title{
+  font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:.9rem;
+}
+.team{
+  display:flex;gap:1rem;
+  overflow-x:auto;
+  padding-bottom:.4rem;
+  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.35) transparent;
+}
+.team::-webkit-scrollbar{height:6px}
+.team::-webkit-scrollbar-thumb{background:rgba(255,255,255,.3);border-radius:3px}
+.member{
+  flex:1 1 0;min-width:150px;max-width:215px;
+  background:var(--card);color:var(--ink);
+  border-radius:16px;overflow:hidden;
+  box-shadow:0 16px 35px -14px rgba(0,0,0,.5);
+}
+.member img{
+  width:100%;aspect-ratio:10/11;object-fit:cover;object-position:top;
+  display:block;
+}
+.member .cap{padding:.7rem .8rem .85rem;text-align:center}
+.member .cap b{display:block;font-size:.92rem;font-weight:700;line-height:1.25}
+.member .cap span{font-size:.72rem;color:var(--ink-soft)}
+.badge{
+  display:inline-block;font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--accent);color:var(--ink);border-radius:99px;padding:.14rem .55rem;
+  margin-top:.35rem;
+}
+.cta{
+  margin-top:1.4rem;display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.84rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink);background:var(--accent);
+  padding:.8rem 1.4rem;border-radius:99px;width:max-content;
+  box-shadow:0 14px 30px -12px rgba(0,0,0,.55);
+}
+@media (hover:hover) and (min-width:901px){
+  .panel:hover,.panel:focus-visible{flex:3 1 0}
+  .panel:hover::after,.panel:focus-visible::after{opacity:1}
+  .panel:hover .hint,.panel:focus-visible .hint{opacity:0;height:0;padding:0;border:none;margin:0;overflow:hidden}
+  .panel:hover .reveal,.panel:focus-visible .reveal{max-height:75vh;opacity:1;margin-top:1.6rem}
+  main:hover .panel:not(:hover):not(:focus-visible){filter:brightness(.72) saturate(.8)}
+}
+@media (hover:hover) and (min-width:901px) and (max-height:820px){
+  .member{min-width:126px;max-width:170px}
+  .panel h2{font-size:clamp(1.5rem,2.4vw,2.2rem)}
+}
+@media (max-width:900px){
+  main{flex-direction:column}
+  .panel{padding:2.1rem 1.3rem 2.3rem;justify-content:flex-start;min-height:52vh}
+  .panel::after{opacity:1}
+  .panel .hint{display:none}
+  .reveal{max-height:none;opacity:1;margin-top:1.4rem}
+  .team{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;overflow:visible}
+  .member{min-width:0;max-width:none}
+}
+footer{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 1.6rem;
+  padding:.95rem 1rem;border-top:1px solid var(--line);
+  font-size:.78rem;color:var(--ink-soft);
+}
+footer a{color:#2B7A6B;text-decoration:none}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="assets/logo.png" alt="Kinovea — Kinésithérapie &amp; Bien-être">
+  <p>Kinésithérapie &amp; Bien-être — choisissez votre cabinet</p>
+</header>
+
+<main>
+
+  <a class="panel p-lasne" href="lasne/" aria-label="Kinovea Lasne — voir le site">
+    <div class="num">01 · Brabant wallon</div>
+    <h2>Lasne</h2>
+    <div class="bar"></div>
+    <p class="addr">Route de l'Etat 331/A — 1380 Lasne (Maransart)</p>
+    <div class="hint">Découvrir
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+    <div class="reveal">
+      <div class="team-title">L'équipe du cabinet</div>
+      <div class="team">
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_c6aa6adbdd6841838c723bbd9f709291~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Amory Larbalestrier" loading="lazy">
+          <div class="cap"><b>Amory Larbalestrier</b><span>Kinésithérapeute</span><br><span class="badge">Responsable</span></div>
+        </div>
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_b2de1b0285104e55bee75f6fc0b72202~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Claire Vandember" loading="lazy">
+          <div class="cap"><b>Claire Vandember</b><span>Kinésithérapeute</span></div>
+        </div>
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_9cf8589d61e049d891e2a37c3eabc0d9~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Edouard Vanpee" loading="lazy">
+          <div class="cap"><b>Edouard Vanpee</b><span>Kinésithérapeute</span></div>
+        </div>
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_ae8cd09844754228ab1727a9ac40b2b8~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Emeline Cabeke" loading="lazy">
+          <div class="cap"><b>Emeline Cabeke</b><span>Kinésithérapeute</span></div>
+        </div>
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_4fc5d32ff14e45678a9254e5e4322a56~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Olivia Agaesse" loading="lazy">
+          <div class="cap"><b>Olivia Agaesse</b><span>Kinésithérapeute</span></div>
+        </div>
+      </div>
+      <span class="cta">Visiter le site
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>
+  </a>
+
+  <a class="panel p-rhode" href="rhode/" aria-label="Kinovea Rhode-Saint-Genèse — voir le site">
+    <div class="num">02 · Brabant flamand</div>
+    <h2>Rhode-Saint-Genèse</h2>
+    <div class="bar"></div>
+    <p class="addr">Rue des iris 2/bte 2 — 1640 Rhode-Saint-Genèse</p>
+    <div class="hint">Découvrir
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+    <div class="reveal">
+      <div class="team-title">L'équipe du cabinet</div>
+      <div class="team">
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_c6aa6adbdd6841838c723bbd9f709291~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Amory Larbalestrier" loading="lazy">
+          <div class="cap"><b>Amory Larbalestrier</b><span>Kinésithérapeute</span><br><span class="badge">Responsable</span></div>
+        </div>
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_a90122aa4f464e18a952ff7200933bc9~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Olivia Voisin" loading="lazy">
+          <div class="cap"><b>Olivia Voisin</b><span>Kinésithérapeute</span></div>
+        </div>
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_0077b812723140c983d20b4b05d261c8~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Zoé Grêde" loading="lazy">
+          <div class="cap"><b>Zoé Grêde</b><span>Kinésithérapeute</span></div>
+        </div>
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_99bbf4c08a784a8eba9ad47cce11dd5c~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Tiffany Mylonas" loading="lazy">
+          <div class="cap"><b>Tiffany Mylonas</b><span>Kinésithérapeute</span></div>
+        </div>
+      </div>
+      <span class="cta">Visiter le site
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>
+  </a>
+
+  <a class="panel p-kraainem" href="kraainem/" aria-label="Kinovea Kraainem — voir le site">
+    <div class="num">03 · Brabant flamand</div>
+    <h2>Kraainem</h2>
+    <div class="bar"></div>
+    <p class="addr">Rue Jef Thumas 2 — 1950 Kraainem</p>
+    <div class="hint">Découvrir
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+    <div class="reveal">
+      <div class="team-title">L'équipe du cabinet</div>
+      <div class="team">
+        <div class="member">
+          <img src="https://static.wixstatic.com/media/ce16d1_c6aa6adbdd6841838c723bbd9f709291~mv2.jpg/v1/fill/w_500,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img.jpg" alt="Amory Larbalestrier" loading="lazy">
+          <div class="cap"><b>Amory Larbalestrier</b><span>Kinésithérapeute</span><br><span class="badge">Responsable</span></div>
+        </div>
+      </div>
+      <span class="cta">Visiter le site
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>
+  </a>
+
+</main>
+
+<footer>
+  <span><a href="tel:+32497243933">+32 497 24 39 33</a></span>
+  <span><a href="https://instagram.com/kinovea_medicalcenters" target="_blank" rel="noopener">@kinovea_medicalcenters</a></span>
+  <span>© Kinovea Medical Centers</span>
+</footer>
+
+</body>
+</html>
