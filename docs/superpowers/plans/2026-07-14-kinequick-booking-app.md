@@ -502,6 +502,20 @@ cd kinovea && git add docs/superpowers/plans/2026-07-14-kinequick-booking-app.md
 
 ---
 
+## RESULT — end-to-end real booking VERIFIED (2026-07-14)
+
+A real appointment was created through the full stack (branded UI → `/api/kq/book` →
+live KineQuick `WebAgenda/AddAppointment`):
+- Amory Larbalestrier (therapist 1), Kiné RMTC (specialty 79), Séance classique (type 3),
+  Kinovea Lasne (location 1), **31/08/2026 08:00**, patient "TEST TEST-A-SUPPRIMER",
+  remark "TEST - a supprimer".
+- Response: `status 201` (created).
+- Server-side truth check: Amory's availability on 31/08 changed from `08:00→09:00`
+  to `08:30→09:00` — the booked half-hour was consumed in KineQuick's own agenda.
+
+**ACTION REQUIRED (Bastien):** delete this TEST appointment (31/08/2026 08:00, Amory)
+from the KineQuick back-office to leave the real agenda clean.
+
 ## Notes / guardrails
 - **Never** log or return the decrypted `webuser` password or `sessionPrivateKey`. They stay inside `kqAuth.js`.
 - `book.js` is a write endpoint open to the origin; for the POC this matches the original widget's exposure. If this outlives the pitch, add a light rate-limit / same-origin check (out of scope now, noted in spec).
