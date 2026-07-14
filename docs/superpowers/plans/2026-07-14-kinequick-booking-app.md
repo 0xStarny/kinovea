@@ -122,9 +122,9 @@ const server = http.createServer(async (req, res) => {
     if (!fs.existsSync(file)) { res.writeHead(404); return res.end('no handler'); }
     delete require.cache[require.resolve(file)];
     const handler = require(file);
-    req.body = req.method === 'POST' ? (()=>{ try { return JSON.parse; } catch { return {}; } })() : {};
-    if (req.method === 'POST') { const raw = await collectBody(req); try { req.body = JSON.parse(raw||'{}'); } catch { req.body = {}; } }
     req.query = Object.fromEntries(url.searchParams);
+    req.body = {};
+    if (req.method === 'POST') { const raw = await collectBody(req); try { req.body = raw ? JSON.parse(raw) : {}; } catch { req.body = {}; } }
     const shim = {
       _s:200,_h:{}, status(c){this._s=c;return this;},
       setHeader(k,v){this._h[k]=v;},
