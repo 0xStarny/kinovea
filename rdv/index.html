@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinovea — Prise de rendez-vous en ligne</title>
+<meta name="description" content="Prenez rendez-vous en ligne avec les kinésithérapeutes Kinovea, au cabinet (Lasne, Rhode-Saint-Genèse) ou à domicile.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,460;0,9..144,560;0,9..144,600;1,9..144,420&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rdv.css">
+<script src="rdv.js" defer></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="app-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../">
+      <img src="../assets/logo.png" alt="Kinovea" onerror="this.style.display='none'">
+    </a>
+    <div class="header-titles">
+      <span class="eyebrow">Rendez-vous en ligne</span>
+      <h1>Prendre rendez-vous</h1>
+    </div>
+  </div>
+</header>
+
+<main class="wrap app-main">
+
+  <!-- Global loading / error -->
+  <div id="app-status" class="app-status" hidden></div>
+
+  <!-- ============ FILTERS ============ -->
+  <section class="panel filters" id="filters" aria-label="Filtres">
+
+    <div class="field">
+      <label class="field-label">Où souhaitez-vous être vu·e ?</label>
+      <div class="segmented" id="mode-toggle" role="tablist">
+        <button class="seg active" data-mode="cabinet" role="tab" aria-selected="true">Au cabinet</button>
+        <button class="seg" data-mode="domicile" role="tab" aria-selected="false">À domicile</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label" id="location-label">Emplacement</label>
+      <div class="location-grid" id="location-picker"><div class="skeleton-row"></div></div>
+    </div>
+
+    <div class="field" id="specialty-field" hidden>
+      <label class="field-label">Spécialité <span class="req">requise</span></label>
+      <div class="chips" id="specialty-filter"></div>
+    </div>
+
+    <div class="field" id="type-field" hidden>
+      <label class="field-label">Type de séance</label>
+      <div class="chips" id="type-filter"></div>
+    </div>
+
+    <div class="field" id="therapist-field" hidden>
+      <label class="field-label">Thérapeute <span class="opt">optionnel</span></label>
+      <div class="chips" id="therapist-filter"></div>
+    </div>
+
+  </section>
+
+  <!-- ============ CALENDAR ============ -->
+  <section class="panel calendar-panel" id="calendar-panel" aria-label="Disponibilités" hidden>
+    <div class="calendar-head">
+      <div class="week-nav" id="week-nav">
+        <button class="nav-btn" id="week-prev" aria-label="Semaine précédente">‹</button>
+        <span class="week-label" id="week-label">—</span>
+        <button class="nav-btn" id="week-next" aria-label="Semaine suivante">›</button>
+      </div>
+      <button class="btn btn-outline btn-sm" id="first-avail">Premier RDV disponible</button>
+    </div>
+    <div class="calendar" id="calendar"></div>
+    <p class="calendar-empty" id="calendar-empty" hidden>Aucun créneau disponible cette semaine. Essayez la semaine suivante.</p>
+  </section>
+
+  <!-- ============ HINT (before location/specialty chosen) ============ -->
+  <section class="panel hint" id="hint">
+    <p>Choisissez un emplacement puis une spécialité pour voir les créneaux disponibles en temps réel.</p>
+  </section>
+
+</main>
+
+<!-- ============ STICKY SELECTION SUMMARY ============ -->
+<div class="selection-bar" id="selection-summary" hidden>
+  <div class="wrap selection-inner">
+    <div class="selection-list" id="selection-list"></div>
+    <button class="btn btn-gold" id="continue-btn">Continuer</button>
+  </div>
+</div>
+
+<!-- ============ BOOKING PANEL (slide-in) ============ -->
+<div class="overlay" id="overlay" hidden></div>
+<aside class="booking-panel" id="booking-panel" aria-hidden="true">
+  <div class="booking-scroll">
+    <button class="panel-close" id="panel-close" aria-label="Fermer">×</button>
+
+    <!-- Recap -->
+    <h2 class="booking-title">Votre rendez-vous</h2>
+    <div class="booking-recap" id="booking-recap"></div>
+
+    <!-- NISS lookup -->
+    <div class="booking-step" id="step-niss">
+      <label class="field-label" for="niss-input">Numéro de registre national (NISS)</label>
+      <div class="niss-row">
+        <input type="text" id="niss-input" inputmode="numeric" placeholder="ex : 85.07.30-033.28" autocomplete="off">
+        <button class="btn btn-outline btn-sm" id="niss-lookup-btn" type="button">Rechercher</button>
+      </div>
+      <p class="niss-hint" id="niss-hint">Déjà patient·e ? Retrouvez votre dossier. Sinon, remplissez le formulaire ci-dessous.</p>
+    </div>
+
+    <!-- New patient form -->
+    <form class="booking-step patient-form" id="patient-form">
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="pf-firstname">Prénom</label>
+          <input type="text" id="pf-firstname" required autocomplete="given-name">
+        </div>
+        <div class="form-row">
+          <label for="pf-lastname">Nom</label>
+          <input type="text" id="pf-lastname" required autocomplete="family-name">
+        </div>
+        <div class="form-row">
+          <label for="pf-email">E-mail</label>
+          <input type="email" id="pf-email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="pf-phone">Téléphone</label>
+          <input type="tel" id="pf-phone" required autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label for="pf-street">Rue et numéro</label>
+          <input type="text" id="pf-street" autocomplete="street-address">
+        </div>
+        <div class="form-row form-row-split">
+          <div>
+            <label for="pf-zip">Code postal</label>
+            <input type="text" id="pf-zip" autocomplete="postal-code">
+          </div>
+          <div>
+            <label for="pf-city">Ville</label>
+            <input type="text" id="pf-city" autocomplete="address-level2">
+          </div>
+        </div>
+        <div class="form-row form-row-full">
+          <label for="pf-remark">Remarque (optionnel)</label>
+          <textarea id="pf-remark" rows="2"></textarea>
+        </div>
+      </div>
+    </form>
+
+    <div class="booking-error" id="booking-error" hidden></div>
+
+    <button class="btn btn-gold booking-confirm" id="confirm-btn">Confirmer le rendez-vous</button>
+    <p class="booking-legal">En confirmant, votre demande est envoyée à l'agenda Kinovea via KineQuick.</p>
+  </div>
+</aside>
+
+<!-- ============ CONFIRMATION ============ -->
+<div class="overlay" id="confirm-overlay" hidden></div>
+<div class="confirmation" id="confirmation" aria-hidden="true">
+  <div class="confirmation-card">
+    <div class="confirm-icon" id="confirm-icon">✓</div>
+    <h2 id="confirm-heading">Rendez-vous confirmé</h2>
+    <div class="confirm-body" id="confirm-body"></div>
+    <button class="btn btn-gold" id="confirm-done">Terminé</button>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="app-footer">
+  <div class="wrap footer-inner">
+    <span>© Kinovea</span>
+    <span class="powered">Powered by <a href="https://www.q-top.be/online-planner-v2/FR/?root=kq43414" target="_blank" rel="noopener">KineQuick</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
