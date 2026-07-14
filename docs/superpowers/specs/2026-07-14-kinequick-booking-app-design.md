@@ -59,8 +59,9 @@ KineQuick existant reste donc actif et trouvable pendant toute cette phase.
 ## Périmètre
 
 Tout le root `kq43414` : les 2 cabinets Kinovea (Lasne, Rhode-Saint-Genèse) **et** tous les groupes
-"Domiciles ..." (visites à domicile par région). Un seul outil remplace entièrement le widget
-KineQuick pour ce root.
+"Domiciles ..." (visites à domicile par région). Un seul outil couvre entièrement, fonctionnellement,
+ce que fait le widget KineQuick pour ce root (voir Contexte pour le statut dev/démo vs. mise en
+prod).
 
 ## Architecture
 
