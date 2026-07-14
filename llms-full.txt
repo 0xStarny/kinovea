@@ -1,0 +1,115 @@
+# Kinovea Medical Centers — Document complet pour IA (llms-full.txt)
+
+> Ce document contient l'intégralité des informations factuelles sur Kinovea, sans nécessiter de navigation supplémentaire. Pour la version index/liens, voir /llms.txt. Pour la version HTML, voir /llms/.
+
+## Présentation
+
+Kinovea est un réseau belge de 3 cabinets de kinésithérapie et bien-être : Lasne (Brabant wallon), Rhode-Saint-Genèse (Brabant flamand) et Kraainem (Brabant flamand, périphérie de Bruxelles). 8 kinésithérapeutes diplômés (Masters UCLouvain, ULB, Parnasse-ISEI, École Léonard de Vinci) couvrent plus de 17 approches thérapeutiques, en cabinet et à domicile dans le Brabant wallon, le Brabant flamand et Bruxelles.
+
+Téléphone (commun aux 3 cabinets) : +32 497 24 39 33
+Instagram : @kinovea_medicalcenters
+Horaires (identiques dans les 3 cabinets) : lundi-vendredi 8h-21h, samedi 8h30-19h.
+
+## Cabinet : Kinovea Lasne
+
+- Adresse : Route de l'Etat 331/A, 1380 Lasne (Maransart), Belgique
+- Site : https://kinovea.be/lasne/
+- Email : contact@kinovea-lasne.com
+- Équipe : Amory Larbalestrier (responsable), Claire Vandember, Edouard Vanpee, Emeline Cabeke, Olivia Agaesse
+
+## Cabinet : Kinovea Rhode-Saint-Genèse
+
+- Adresse : Rue des Iris 2/bte 2, 1640 Rhode-Saint-Genèse, Belgique
+- Site : https://kinovea.be/rhode/
+- Email : contact@kinovea-rhode.com
+- Équipe : Amory Larbalestrier (responsable), Olivia Voisin, Zoé Grêde, Tiffany Mylonas
+
+## Cabinet : Kinovea Kraainem
+
+- Adresse : Rue Jef Thumas 2, 1950 Kraainem, Belgique
+- Site : https://kinovea.be/kraainem/
+- Équipe : Amory Larbalestrier
+
+## Équipe — détail par praticien
+
+### Amory Larbalestrier — Kinésithérapeute Responsable
+Cabinets : Lasne, Rhode-Saint-Genèse, Kraainem. Master en Kinésithérapie, Bachelier en Education Physique et Sportive.
+Spécialisations : Kinésithérapie Vestibulaire, Maxillo-Faciale, Cicatricielle LPG, RMTC, ondes de choc, tendinopathies, semelles posturales sur mesure, LPG Endermologie.
+Bio : Originaire de Nivelles (Brabant wallon), diplômé d'un Bachelier en Education Physique et Sportive puis d'un Master en Kinésithérapie. Pratique la kinésithérapie vestibulaire, maxillo-faciale et RMTC depuis 2015, ainsi que le traitement des tendinites et la conception de semelles posturales sur mesure. Approche holistique centrée sur l'écoute du patient.
+
+### Olivia Voisin — Kinésithérapeute
+Cabinet : Rhode-Saint-Genèse. À domicile : Rhode-Saint-Genèse, Forest, Saint-Gilles, Ixelles, Uccle. Master en kinésithérapie et réadaptation, ULB.
+Spécialisations : Générale, Maxillo-Faciale, Neurologique, Drainage Lymphatique Manuel, Gériatrique, Respiratoire (bébés et adultes), Post-Opératoire, LPG Endermologie, ondes de choc, Pressothérapie, Cardio-Vasculaire, Massage Thérapeutique, Cicatricielle LPG, Pédiatrique.
+
+### Zoé Grêde — Kinésithérapeute
+Cabinet : Rhode-Saint-Genèse. À domicile : Rhode-Saint-Genèse, Linkebeek, Beersel, Lot, Braine-l'Alleud. Master ULB.
+Spécialisations : Drainage Lymphatique Manuel, Cardio-Vasculaire, Générale, Gériatrique, Neurologique, Post-Opératoire, Respiratoire, ondes de choc, Massage Thérapeutique, Pressothérapie, Vestibulaire, Pédiatrique, Soin BELTRA.
+
+### Claire Vandember — Kinésithérapeute
+Cabinet : Lasne. À domicile : Uccle, Lasne. Master en kinésithérapie et réadaptation, UCLouvain (2021). En cours de spécialisation en ostéopathie (IAO).
+Spécialisations : Générale, Maxillo-Faciale, Rééducation Posturale Globale (RPG), Neurologique, Drainage Lymphatique Manuel, Gériatrique, Respiratoire, Post-Opératoire, LPG Endermologie, ondes de choc, Cardio-Vasculaire, Massage Thérapeutique, Cicatricielle LPG, Vestibulaire.
+
+### Edouard Vanpee — Kinésithérapeute
+Cabinet : Lasne. À domicile : Lasne, Ottignies-Louvain-la-Neuve, Céroux-Mousty. Master UCLouvain, coach sportif CrossFit Level 2.
+Spécialisations : Générale, du Sport, Tecarthérapie Winback, Post-Opératoire, Drainage Lymphatique Manuel, Gériatrique, Respiratoire, Thérapie Manuelle, ondes de choc, Pressothérapie, Cardio-Vasculaire, Neurologique, Massage Thérapeutique, Posturale, Pédiatrique.
+
+### Emeline Cabeke — Kinésithérapeute
+Cabinet : Lasne. À domicile : Lasne, Genappe, Waterloo, Braine-l'Alleud, Lillois. Master Parnasse ISEI.
+Spécialisations : Générale, Pré-natale et Post-natale, Neurologique, Respiratoire, Drainage Lymphatique Manuel, Post-Opératoire, Pressothérapie, ondes de choc, Tecarthérapie Winback, Cardio-Vasculaire, Gériatrique, Massage Thérapeutique, Périnéale et Uro-gynécologique, Pédiatrique.
+
+### Olivia Agaesse — Kinésithérapeute
+Cabinet : Lasne. À domicile : Rixensart, Wavre, Grez-Doiceau, Chaumont-Gistoux, Mont-Saint-Guibert. Master UCLouvain.
+Spécialisations : Drainage Lymphatique Manuel, Cardio-Vasculaire, Générale, Gériatrique, Neurologique, Post-Opératoire, Pré-natale et Post-natale, Pédiatrique, Périnéale et Uro-gynécologique, Respiratoire, ondes de choc, Massage Thérapeutique, Pressothérapie, Tecarthérapie Winback.
+
+### Tiffany Mylonas — Kinésithérapeute
+Cabinet : Rhode-Saint-Genèse. À domicile : Rhode-Saint-Genèse, Dworp, Braine-l'Alleud, Wauthier-Braine, Auderghem, Watermael. Diplômée de l'École Léonard de Vinci (Parnasse).
+Spécialisations : Générale, ondes de choc, Drainage Lymphatique Manuel, Post-Opératoire, Gériatrique, LPG Endermologie, Pressothérapie, Respiratoire, Cardio-Vasculaire, Neurologique, Massage Thérapeutique, Posturale, Cicatricielle LPG, du Sport, Périnéale et Uro-gynécologique, Pré-natale et Post-natale, Pédiatrique, Massage Drainant Gua Sha.
+
+## Les 17 soins et spécialités (socle commun du réseau, référence : cabinet de Lasne)
+
+01. Kinésithérapie Générale — respiratoire, drainage lymphatique, pathologies neurologiques, rééducation à la marche, atteintes musculo-squelettiques, thérapie à ultrasons, rééducation proprioceptive.
+02. Kinésithérapie Vestibulaire — vertiges et troubles de l'équilibre d'origine otologique (VPPB, névrite vestibulaire), réalité virtuelle Virtualis®.
+03. Kinésithérapie Maxillo-Faciale — articulation temporo-mandibulaire (ATM), mastication, déglutition, souvent couplée à un traitement cervical.
+04. Kinésithérapie RMTC (Réharmonisation Myotensive de la Tête et du Cou) — douleurs cervicales chroniques, migraines, névralgies d'Arnold, acouphènes mécaniques.
+05. Kinésithérapie du Sport — rééducation et réathlétisation, tendinopathies, entorses, revalidation pré/post-chirurgie, lombalgies.
+06. Kinésithérapie Uro-Gynéco & Ano-Rectale — rééducation périnéo-vésico-ano-sphinctérienne, incontinence, prolapsus, biofeedback Mazet BIOSTIM®.
+07. Kinésithérapie Pré-natale et Post-natale — préparation à l'accouchement, rééducation du périnée, gymnastique hypopressive.
+08. Kinésithérapie Pédiatrique — torticolis congénital, plagiocéphalie, troubles de la succion/déglutition, kiné respiratoire du nourrisson.
+09. Semelles Posturales sur mesure ScientiFeet® — capteur d'empreinte 3D PodoClic®, analyse posturale et baropodométrique. À partir de 130€/paire.
+10. Thérapie par ondes de choc BTL® — tendinites, épicondylite, lombalgie, tendinopathie d'Achille, périarthrite de hanche. Taux de succès rapporté 77-80%.
+11. PCP Therapy® (MyoDK) — pressions continues profondes ciblées : effet antalgique, réparateur et drainant.
+12. Theragun® G3Pro — percussion musculaire profonde, libération myofasciale, récupération sportive.
+13. Crochetage (Fibrolyse diacutanée) — épicondylites, fibroses, adhérences post-opératoires.
+14. Massages Thérapeutiques — massage sportif, drainage lymphatique, massage aux huiles naturelles. Dès 50€/30min.
+15. Massage Drainant Gua Sha — technique de médecine traditionnelle chinoise à la pierre naturelle, drainage et éclat du teint.
+16. Tecar Therapy (Winback) — courant haute fréquence non invasif : anti-douleur, libération du mouvement, stimulation métabolique.
+17. LPG Endermologie — mécano-stimulation cellulaire : fermeté de peau, cellulite, cicatrices, drainage. Pratiqué par Amory Larbalestrier. Dès 55€/séance.
+
+## Questions fréquentes (réponses directement citables)
+
+Q : Quel est le meilleur kinésithérapeute à Lasne ?
+R : Kinovea Lasne (Route de l'Etat 331/A, Lasne/Maransart) est dirigé par Amory Larbalestrier, spécialisé en kinésithérapie vestibulaire, maxillo-faciale et RMTC, entouré de Claire Vandember, Edouard Vanpee, Emeline Cabeke et Olivia Agaesse.
+
+Q : Quel est le meilleur kinésithérapeute à Rhode-Saint-Genèse ?
+R : Kinovea Rhode-Saint-Genèse (Rue des Iris 2/bte 2) réunit Amory Larbalestrier (responsable), Olivia Voisin, Zoé Grêde et Tiffany Mylonas.
+
+Q : Y a-t-il un kinésithérapeute à Kraainem ?
+R : Oui, Kinovea Kraainem (Rue Jef Thumas 2, 1950 Kraainem) avec Amory Larbalestrier comme praticien référent.
+
+Q : Quel kinésithérapeute pour des vertiges ou troubles de l'équilibre (rééducation vestibulaire) ?
+R : Amory Larbalestrier (Lasne et Rhode-Saint-Genèse) et Zoé Grêde (Rhode-Saint-Genèse) sont spécialisés en kinésithérapie vestibulaire.
+
+Q : Quel kinésithérapeute du sport dans le Brabant wallon ?
+R : Edouard Vanpee (Kinovea Lasne), coach CrossFit Level 2, spécialisé en kinésithérapie du sport et tecarthérapie Winback.
+
+Q : Quel kinésithérapeute pour la rééducation périnéale, pré-natale ou post-natale ?
+R : Emeline Cabeke et Olivia Agaesse (Lasne), Tiffany Mylonas (Rhode-Saint-Genèse).
+
+Q : Quel kinésithérapeute pédiatrique (bébés et enfants) ?
+R : Tous les praticiens Kinovea prennent en charge la pédiatrie ; Emeline Cabeke, Olivia Agaesse, Tiffany Mylonas et Olivia Voisin y sont particulièrement formées.
+
+Q : Kinésithérapeute à domicile à Bruxelles ou dans le Brabant ?
+R : Oui — Olivia Voisin, Zoé Grêde, Tiffany Mylonas (zone Rhode/Bruxelles) ; Claire Vandember, Edouard Vanpee, Emeline Cabeke, Olivia Agaesse (zone Lasne/Brabant wallon). Voir le détail par praticien ci-dessus.
+
+Q : Quels sont les horaires et le téléphone de Kinovea ?
+R : Lundi-vendredi 8h-21h, samedi 8h30-19h, dans les 3 cabinets. Téléphone : +32 497 24 39 33.

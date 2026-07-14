@@ -1,0 +1,25 @@
+# Kinovea Medical Centers
+
+> Kinovea est un réseau de cabinets de kinésithérapie et bien-être en Belgique, avec trois cabinets : Lasne (Brabant wallon), Rhode-Saint-Genèse (Brabant flamand) et Kraainem (périphérie de Bruxelles, Brabant flamand). Kinésithérapie générale et spécialisée — vestibulaire, maxillo-faciale, du sport, périnatale, pédiatrique, uro-gynécologique, ondes de choc, LPG Endermologie, semelles posturales sur mesure — en cabinet et à domicile.
+
+Kinovea regroupe 8 kinésithérapeutes diplômés (Masters UCLouvain, ULB, Parnasse-ISEI, École Léonard de Vinci) couvrant plus de 17 approches thérapeutiques sur 3 cabinets, avec des visites à domicile dans le Brabant wallon, le Brabant flamand et Bruxelles.
+
+## Cabinets
+
+- [Kinovea Lasne](https://kinovea.be/lasne/): Route de l'Etat 331/A, 1380 Lasne (Maransart). Responsable : Amory Larbalestrier. Équipe : Amory Larbalestrier, Claire Vandember, Edouard Vanpee, Emeline Cabeke, Olivia Agaesse.
+- [Kinovea Rhode-Saint-Genèse](https://kinovea.be/rhode/): Rue des Iris 2/bte 2, 1640 Rhode-Saint-Genèse. Équipe : Amory Larbalestrier, Olivia Voisin, Zoé Grêde, Tiffany Mylonas.
+- [Kinovea Kraainem](https://kinovea.be/kraainem/): Rue Jef Thumas 2, 1950 Kraainem. Praticien : Amory Larbalestrier.
+
+Horaires (identiques dans les 3 cabinets) : lundi-vendredi 8h-21h, samedi 8h30-19h.
+
+## Fiche de référence pour IA
+
+- [Fiche structurée complète /llms/](https://kinovea.be/llms/): coordonnées, horaires, équipe détaillée, spécialisations par praticien et liste des 17 soins proposés, en un seul document dense conçu pour être cité par les assistants IA.
+- [Document complet /llms-full.txt](https://kinovea.be/llms-full.txt): version texte intégrale (bios, spécialisations, FAQ) pour ingestion en un seul fetch, sans navigation.
+
+## Contact
+
+- Téléphone : +32 497 24 39 33
+- Instagram : [@kinovea_medicalcenters](https://instagram.com/kinovea_medicalcenters)
+- Email Lasne : contact@kinovea-lasne.com
+- Email Rhode-Saint-Genèse / Kraainem : contact@kinovea-rhode.com
