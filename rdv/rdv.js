@@ -336,6 +336,8 @@
     hint.classList.remove('found');
     $('patient-form').classList.remove('hidden-form');
     ['pf-firstname', 'pf-lastname', 'pf-email', 'pf-phone', 'pf-street', 'pf-zip', 'pf-city', 'pf-remark'].forEach((id) => { $(id).value = ''; $(id).classList.remove('invalid'); });
+    $('cancel-policy-accept').checked = false;
+    $('confirm-btn').disabled = true;
   }
 
   async function lookupNiss() {
@@ -377,6 +379,9 @@
 
   async function confirmBooking() {
     const err = $('booking-error'); err.hidden = true;
+    if (!$('cancel-policy-accept').checked) {
+      err.textContent = 'Merci d\'accepter la politique d\'annulation avant de confirmer.'; err.hidden = false; return;
+    }
     const { patient, valid } = collectPatient();
     if (!valid) { err.textContent = 'Merci de compléter les champs obligatoires (prénom, nom, e-mail valide, téléphone).'; err.hidden = false; return; }
     patient.remark = $('pf-remark').value.trim();
@@ -450,6 +455,7 @@
     $('panel-close').addEventListener('click', closeBooking);
     $('overlay').addEventListener('click', closeBooking);
     $('niss-lookup-btn').addEventListener('click', lookupNiss);
+    $('cancel-policy-accept').addEventListener('change', (e) => { $('confirm-btn').disabled = !e.target.checked; });
     $('confirm-btn').addEventListener('click', confirmBooking);
     $('confirm-done').addEventListener('click', closeConfirmation);
     $('confirm-overlay').addEventListener('click', closeConfirmation);

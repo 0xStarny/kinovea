@@ -156,7 +156,19 @@
 
     <div class="booking-error" id="booking-error" hidden></div>
 
-    <button class="btn btn-gold booking-confirm" id="confirm-btn">Confirmer le rendez-vous</button>
+    <div class="cancel-policy">
+      <p class="cancel-policy-text">
+        <strong>Politique d'annulation :</strong> tout rendez-vous doit être annulé au minimum
+        <strong>48h à l'avance</strong> (hors dimanche et jours fériés). À défaut, la séance sera
+        facturée intégralement et ne sera pas remboursable par votre mutuelle.
+      </p>
+      <label class="cancel-policy-check">
+        <input type="checkbox" id="cancel-policy-accept" required>
+        <span>J'ai pris connaissance de cette politique d'annulation et je l'accepte.</span>
+      </label>
+    </div>
+
+    <button class="btn btn-gold booking-confirm" id="confirm-btn" disabled>Confirmer le rendez-vous</button>
     <p class="booking-legal">En confirmant, votre demande est envoyée à l'agenda Kinovea via KineQuick.</p>
   </div>
 </aside>

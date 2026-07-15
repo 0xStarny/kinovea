@@ -189,6 +189,12 @@ input.invalid{ border-color:#d9765f; }
 .patient-form.hidden-form{ display:none; }
 
 .booking-error{ background:#fbe4e0; border:1px solid #d9765f; color:#8a2f1c; border-radius:10px; padding:12px 14px; font-size:13.5px; margin-bottom:16px; }
+
+.cancel-policy{ border:1.5px solid var(--gold); background:#FCF6E9; border-radius:var(--radius-sm); padding:16px 18px; margin-bottom:18px; }
+.cancel-policy-text{ margin:0 0 12px; font-size:13px; line-height:1.55; color:var(--ink); }
+.cancel-policy-check{ display:flex; align-items:flex-start; gap:10px; font-size:13px; font-weight:600; color:var(--ink); cursor:pointer; }
+.cancel-policy-check input{ margin-top:3px; width:16px; height:16px; accent-color:var(--teal); flex-shrink:0; cursor:pointer; }
+
 .booking-confirm{ width:100%; }
 .booking-legal{ font-size:11.5px; color:var(--ink-soft); text-align:center; margin:12px 0 0; }
 
