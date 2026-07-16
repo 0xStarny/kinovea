@@ -41,17 +41,6 @@
         {"@type":"Person","name":"Zoé Grêde","jobTitle":"Kinésithérapeute"},
         {"@type":"Person","name":"Tiffany Mylonas","jobTitle":"Kinésithérapeute"}
       ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"Quel est le meilleur kinésithérapeute à Rhode-Saint-Genèse ?",
-         "acceptedAnswer":{"@type":"Answer","text":"Kinovea Rhode-Saint-Genèse, Rue des Iris 2/bte 2, réunit Amory Larbalestrier (responsable), Olivia Voisin, Zoé Grêde et Tiffany Mylonas, avec des spécialisations en kinésithérapie générale, respiratoire, neurologique, gériatrique, pédiatrique et cardio-vasculaire."}},
-        {"@type":"Question","name":"Quel kinésithérapeute à domicile à Rhode-Saint-Genèse ou Bruxelles ?",
-         "acceptedAnswer":{"@type":"Answer","text":"Olivia Voisin, Zoé Grêde et Tiffany Mylonas de Kinovea Rhode-Saint-Genèse assurent des visites à domicile jusqu'à Forest, Saint-Gilles, Ixelles, Uccle, Linkebeek, Beersel, Auderghem et Watermael."}},
-        {"@type":"Question","name":"Quels sont les horaires de Kinovea Rhode-Saint-Genèse ?",
-         "acceptedAnswer":{"@type":"Answer","text":"Kinovea Rhode-Saint-Genèse est ouvert du lundi au vendredi de 8h à 21h et le samedi de 8h30 à 19h. Téléphone : +32 497 24 39 33."}}
-      ]
     }
   ]
 }
@@ -236,24 +225,23 @@
   #praticiens{ background:linear-gradient(180deg, var(--mist) 0%, var(--paper) 420px, var(--paper) 100%); }
   .team-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:52px; flex-wrap:wrap; }
   .team-filters{ margin-bottom:26px; }
-  .team-carousel{ position:relative; }
+  .team-carousel{ position:relative; display:flex; align-items:center; gap:14px; }
   .team-grid{
+    flex:1; min-width:0;
     display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory;
     scroll-behavior:smooth; padding:4px 2px 10px; -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
   }
   .team-grid::-webkit-scrollbar{ display:none; }
   .team-nav{
-    position:absolute; top:38%; transform:translateY(-50%); z-index:5;
+    flex:none;
     width:46px; height:46px; border-radius:50%; border:1px solid var(--line);
     background:rgba(255,255,255,.96); backdrop-filter:blur(6px); color:var(--ink);
     display:flex; align-items:center; justify-content:center; cursor:pointer;
     box-shadow:var(--shadow); transition:border-color .2s, color .2s, opacity .2s;
   }
   .team-nav:hover{ border-color:var(--teal); color:var(--teal); }
-  .team-prev{ left:-14px; }
-  .team-next{ right:-14px; }
-  .team-nav.is-disabled{ opacity:0; pointer-events:none; }
+  .team-nav.is-disabled{ opacity:.28; pointer-events:none; }
   .team-empty{ display:none; color:var(--ink-soft); font-size:14.5px; padding:26px 0; }
   .team-card{
     flex:0 0 clamp(240px, 23vw, 300px); scroll-snap-align:start;
@@ -409,8 +397,8 @@
   .contact-intro{ display:flex; gap:26px; align-items:flex-start; flex-wrap:wrap; padding-bottom:36px; border-bottom:1px solid var(--line); margin-bottom:44px; }
   .contact-intro img{ height:56px; width:auto; }
   .contact-intro p{ margin:6px 0 0; color:var(--ink-soft); font-size:15px; max-width:60ch; }
-  .policy-box{ padding:20px 22px; border-radius:16px; border:1px solid var(--line); background:var(--paper-2); font-size:12.8px; color:var(--ink-soft); line-height:1.65; margin:24px 0 44px; }
-  .policy-box b{ color:var(--ink); }
+  .policy-box{ padding:20px 22px; border-radius:16px; border:1px solid rgba(193,84,36,.32); border-left:4px solid #C25A2B; background:#FAEBDF; font-size:12.8px; color:#7A4526; line-height:1.65; margin:24px 0 44px; }
+  .policy-box b{ color:#A8431C; }
   .filter-row{ display:flex; gap:20px; flex-wrap:wrap; margin-bottom:30px; }
   .filter-field{ display:flex; flex-direction:column; gap:8px; }
   .filter-field label{ font-family:'Inter',sans-serif; font-size:14px; color:var(--ink-soft); font-weight:500; letter-spacing:0; text-transform:none; }
@@ -431,6 +419,10 @@
 
   .hours-contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; padding-top:10px; }
   .info-list{ margin-top:20px; display:flex; flex-direction:column; gap:20px; }
+  .contact-info-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin:0 0 30px; }
+  .contact-info-row .info-item{ min-width:0; }
+  .contact-info-row .info-item a, .contact-info-row .info-item p{ overflow-wrap:anywhere; }
+  @media (max-width:768px){ .contact-info-row{ grid-template-columns:1fr; gap:18px; } }
   .info-item{ display:flex; gap:16px; }
   .info-item .ico{ width:40px; height:40px; border-radius:12px; background:var(--teal-deep); color:var(--leaf); display:flex; align-items:center; justify-content:center; flex:none; }
 
@@ -1032,7 +1024,7 @@
       <div class="avis-rating">
         <div class="avis-stars">★★★★★</div>
         <div class="avis-score">4.9<span>/5</span></div>
-        <div class="avis-count">33 avis Google</div>
+        <div class="avis-count">56 avis Google</div>
       </div>
     </div>
     <div class="avis-carousel">
@@ -1087,7 +1079,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>Copyright © 2016 Kinovea. All rights reserved. Siège social : Rue de Faux 36 - 1490 Sart-Messire-Guillaume - BE0645.682.379</span>
+      <span>Copyright © <span class="footYear">2026</span> Kinovea. All rights reserved. Siège social : Rue de Faux 36 - 1490 Sart-Messire-Guillaume - BE0645.682.379</span>
       <span><a href="#/privacy">Politique de confidentialité</a> · <a href="#/cgv">Conditions générales</a></span>
     </div>
     <p class="foot-legal-note">Amory Larbalestrier, diplômé en Belgique, Master en Kinésithérapie, Bachelier en Education Physique et Sportive. Autorité compétente : Commission Médicale Provinciale, Place Victor Horta 40 bte10, 1060 Bruxelles. Responsabilité Professionnelle : AMMA Assurances, www.amma.be, 02 209 02 00.</p>
@@ -1313,18 +1305,26 @@
   var LOCATION_TAGS = ['Kinovea Lasne','Kinovea Rhode-Saint-Genèse','Kiné à domicile Brabant flamand','Kiné à domicile Brabant wallon','Kiné à domicile Bruxelles'];
 
   var AVIS = [
-    { text:"Après des années à consulter différents spécialistes pour un problème d'oreille interne qui semblait sans issue, ce patient a enfin trouvé une réponse chez Kinovea : un diagnostic précis dès les premières séances, et un retour rapide à sa passion pour le sport automobile.",
-      cite:"Patient, rééducation vestibulaire" },
-    { text:"Après plusieurs semaines de suivi, cette patiente souligne le professionnalisme et l'organisation d'Amory, la propreté et la modernité du cabinet (équipement à la pointe comme les ondes de choc), ainsi que la fiabilité du système de réservation en ligne et la facilité de stationnement.",
-      cite:"Orléane N., kinésithérapeute du sport (Liège)" },
-    { text:"Une névralgie d'Arnold qui perturbait son sommeil depuis des mois a disparu après seulement quelques séances, un soulagement que ce patient n'espérait plus après tant de nuits difficiles.",
-      cite:"Patient, névralgie d'Arnold" },
-    { text:"Une épine calcanéenne, source de douleurs depuis plusieurs mois, a été traitée efficacement, permettant à ce patient de retrouver une marche sans gêne.",
-      cite:"Patient, douleur au talon" },
-    { text:"Ce patient souligne un cabinet calme et agréable, un parking facile d'accès, et une équipe de praticiens aussi qualifiés qu'à l'écoute, avec une gentillesse qui a particulièrement marqué son passage.",
-      cite:"Patient, suivi au cabinet" },
-    { text:"Toujours disponible et flexible dans son planning, ce kinésithérapeute mène des séances efficaces tout en gardant le sourire, ce que ses patients apprécient particulièrement.",
-      cite:"Patient, suivi régulier" }
+    { text:"Incroyable prise en charge, je recommande à 100 % ! Venu suite à une blessure au ligament liée au hockey, les séances étaient ciblées, progressives et toujours très bien expliquées. On sent une vraie expertise et une passion pour le suivi des sportifs. Aujourd'hui, je suis de retour sur les terrains sans douleur.",
+      cite:"Lucas R. · Avis Google" },
+    { text:"Je recommande vivement ce kiné. Très professionnel, à l'écoute et bienveillant. Les séances sont efficaces et adaptées, et on se sent rapidement en confiance. J'ai constaté une nette amélioration grâce à son travail. Merci beaucoup !",
+      cite:"Maryna N. · Avis Google" },
+    { text:"Très bon kinésithérapeute, professionnel, à l'écoute. Son cabinet dispose de nombreux équipements dernier cri et de professionnels compétents. Je recommande.",
+      cite:"Jody C. · Avis Google" },
+    { text:"Super sympa et pro. Merci Émeline pour ton écoute et ton travail dans la bienveillance.",
+      cite:"Cathy E. · Avis Google" },
+    { text:"Amory est un excellent kiné. Toujours disponible et très flexible, ses séances ont toujours été très efficaces. Et en plus, il vous accueille avec le sourire.",
+      cite:"Alexandre B. · Avis Google" },
+    { text:"Kiné au top : il a soigné mon souci vestibulaire en quelques séances.",
+      cite:"Ian N. · Avis Google" },
+    { text:"Le cabinet est très agréable et calme. Bien situé avec parking. Les praticiens sont non seulement très qualifiés mais aussi très à l'écoute. La gentillesse et le côté humain très développé m'ont particulièrement marqué. Je recommande vivement.",
+      cite:"Jo J. · Avis Google" },
+    { text:"Kiné très disponible et serviable. Au-delà des manipulations et conseils, Amory est à l'écoute de ses patients : on sent qu'il exerce un métier qui le passionne et qu'il souhaite vraiment aider sa patientèle. Hautement recommandable, techniquement et humainement !",
+      cite:"Loren P. · Avis Google" },
+    { text:"Super centre de kinésithérapie ! Les praticiens sont au top : sympas, accueillants, efficaces et super pro. Toujours très agréable de s'y rendre pour des soins. Je recommande sans hésitation !",
+      cite:"Noémie T. · Avis Google" },
+    { text:"Venue pour une capsulite d'épaule sévère, évolution incroyable et séances très agréables avec Amory ! Je recommande vivement !",
+      cite:"Paolina P. · Avis Google" }
   ];
   var avisPage = 0;
   function avisIsMobile(){ return window.matchMedia('(max-width: 768px)').matches; }
@@ -1659,6 +1659,21 @@
     });
   }
 
+  var accessMapInstance = null;
+  var CABINET_ACCESS = { latlng:[50.7462400, 4.3575886], label:'Kinovea Rhode-Saint-Genèse' };
+  function initAccessMap(){
+    var el = document.getElementById('accessMap');
+    if(!el || typeof L === 'undefined') return;
+    if(accessMapInstance){ accessMapInstance.remove(); accessMapInstance = null; }
+    var map = L.map('accessMap', { scrollWheelZoom:false }).setView(CABINET_ACCESS.latlng, 15);
+    accessMapInstance = map;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 18
+    }).addTo(map);
+    L.circleMarker(CABINET_ACCESS.latlng, { radius:10, color:'#FAF7EF', weight:2.5, fillColor:'#E3A23C', fillOpacity:1 }).addTo(map)
+      .bindTooltip(CABINET_ACCESS.label, { direction:'top', permanent:true, offset:[0,-10], className:'commune-tooltip' });
+  }
+
   function renderPrivacyPage(){
     backLabel.textContent = "Retour à l'accueil";
     backLink.onclick = function(){ location.hash = '#home'; };
@@ -1819,6 +1834,16 @@
         "<div class='detail-cta'><a class='btn btn-gold' href='"+BOOK+"' target='_blank' rel='noopener'>Prendre RDV en ligne</a></div></div>"+
       "</div>"+
 
+      "<div class='eyebrow'>Votre première visite</div>"+
+      "<h2 class='title-lg' style='max-width:none;margin-bottom:22px;'>Bien préparer votre premier rendez-vous</h2>"+
+      "<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;'>"+
+        "<div class='callout' style='margin:0;'><h4>Prescription médicale</h4><p style='margin:0;font-size:13.6px;'>Apportez votre ordonnance de kinésithérapie délivrée par votre médecin : elle est indispensable pour le remboursement par la mutuelle.</p></div>"+
+        "<div class='callout' style='margin:0;'><h4>Documents utiles</h4><p style='margin:0;font-size:13.6px;'>Votre carte d'identité, une vignette de mutuelle, et vos examens récents si vous en avez (radiographie, IRM, protocole opératoire).</p></div>"+
+        "<div class='callout' style='margin:0;'><h4>Tenue</h4><p style='margin:0;font-size:13.6px;'>Prévoyez une tenue souple et confortable, adaptée à la zone à traiter (short pour un genou, débardeur pour une épaule…).</p></div>"+
+        "<div class='callout' style='margin:0;'><h4>Déroulement</h4><p style='margin:0;font-size:13.6px;'>La première séance débute par un bilan complet : antécédents, examen clinique, puis définition ensemble des objectifs et du plan de traitement.</p></div>"+
+      "</div>"+
+      "<p style='font-size:13.2px;color:var(--ink-soft);margin:14px 0 0;'>Les tarifs des séances et les modalités de remboursement sont détaillés dans nos <a href='#/cgv'>conditions générales</a>.</p>"+
+
       "<div class='policy-box'><b>Conditions d'annulation.</b> Tout rendez-vous manqué ou non annulé au minimum 48h à l'avance est systématiquement comptabilisé, quel que soit le motif (maladie, enfant, véhicule, contraintes professionnelles...). Les annulations par e-mail ne sont pas acceptées, ces derniers pouvant se retrouver dans les indésirables et ne pas être réceptionnés.<br><br>Afin d'assurer la continuité des soins, les patients présentant des symptômes peuvent être reçus à condition de porter un masque. En prenant rendez-vous, vous acceptez automatiquement ces conditions.</div>"+
 
       "<div class='eyebrow'>Praticiens &amp; thérapeutes</div>"+
@@ -1830,13 +1855,18 @@
       "<div id='directoryGrid'></div>"+
       "<div id='directoryEmpty'>Aucun kinésithérapeute ne correspond à ces critères pour le moment. Essayez une autre combinaison, ou contactez-nous directement.</div>"+
 
+      "<div class='eyebrow' style='margin-top:52px;'>Nous joindre</div>"+
+      "<h2 class='title-lg' style='max-width:none;margin-bottom:24px;'>Horaires, accès et contact</h2>"+
+      "<div class='contact-info-row'>"+
+        "<div class='info-item'><div class='ico'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg></div><div><h4>Horaires</h4><p>Du lundi au vendredi de 8h à 21h.<br>Samedi de 8h30 à 19h.</p></div></div>"+
+        "<div class='info-item'><div class='ico'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z'/><circle cx='12' cy='10' r='3'/></svg></div><div><h4>Adresse</h4><a href='https://www.google.com/maps/place/Rhode-Saint-Gen%C3%A8se/@50.7461875,4.355152,14z' target='_blank' rel='noopener'>Rue des iris 2/bte 2, 1640 Rhode-Saint-Genèse</a></div></div>"+
+        "<div class='info-item'><div class='ico'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0122 16.92z'/></svg></div><div><h4>Téléphone</h4><a href='tel:+32497243933'>0497 24 39 33</a></div></div>"+
+        "<div class='info-item'><div class='ico'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 4h16v16H4z'/><path d='M22 6l-10 7L2 6'/></svg></div><div><h4>Email</h4><a href='mailto:contact@kinovea-rhode.com'>contact@kinovea-rhode.com</a></div></div>"+
+      "</div>"+
       "<div class='hours-contact-grid'>"+
-        "<div><div class='eyebrow'>Horaires</div><p style='color:var(--ink-soft);margin:0;'>Du lundi au vendredi de 8h à 21h.<br>Samedi de 8h30 à 19h.</p>"+
-          "<div class='info-list'>"+
-            "<div class='info-item'><div class='ico'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z'/><circle cx='12' cy='10' r='3'/></svg></div><div><h4>Adresse</h4><a href='https://www.google.com/maps/place/Rhode-Saint-Gen%C3%A8se/@50.7461875,4.355152,14z' target='_blank' rel='noopener'>Rue des iris 2/bte 2, 1640 Rhode-Saint-Genèse</a></div></div>"+
-            "<div class='info-item'><div class='ico'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0122 16.92z'/></svg></div><div><h4>Téléphone</h4><a href='tel:+32497243933'>0497 24 39 33</a></div></div>"+
-            "<div class='info-item'><div class='ico'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 4h16v16H4z'/><path d='M22 6l-10 7L2 6'/></svg></div><div><h4>Email</h4><a href='mailto:contact@kinovea-rhode.com'>contact@kinovea-rhode.com</a></div></div>"+
-          "</div>"+
+        "<div style='display:flex;flex-direction:column;'>"+
+          "<div id='accessMap' style='flex:1;min-height:380px;border-radius:20px;overflow:hidden;border:1px solid var(--line);'></div>"+
+          "<div class='detail-cta' style='margin-top:14px;'><a class='btn btn-outline' href='https://www.google.com/maps/dir/?api=1&amp;destination=Rue%20des%20Iris%202%2C%201640%20Rhode-Saint-Gen%C3%A8se' target='_blank' rel='noopener'>Itinéraire dans Google Maps</a></div>"+
         "</div>"+
         "<div class='form-card'>"+
           "<h3 style='font-size:20px;margin:0 0 6px;'>Demande d'information ou prise de RDV</h3>"+
@@ -1876,6 +1906,8 @@
     var form = document.getElementById('contactForm');
     var success = document.getElementById('formSuccess');
     form.addEventListener('submit', function(e){ e.preventDefault(); success.classList.add('show'); form.reset(); });
+
+    requestAnimationFrame(function(){ initAccessMap(); });
   }
 
   /* ============================================================
@@ -2078,10 +2110,15 @@
   })();
   renderSoinsDropdown();
   renderAvisPage();
+  /* défilement automatique du carrousel d'avis (pause au survol, reset après action manuelle) */
+  var avisTimer = null;
+  function avisAutoStart(){ if(reduceMotion || avisTimer) return; avisTimer = setInterval(function(){ avisGoTo(1); }, 6000); }
+  function avisAutoStop(){ if(avisTimer){ clearInterval(avisTimer); avisTimer = null; } }
+  function avisAutoRestart(){ avisAutoStop(); avisAutoStart(); }
   var avisPrevBtn = document.getElementById('avisPrev');
   var avisNextBtn = document.getElementById('avisNext');
-  if(avisPrevBtn) avisPrevBtn.addEventListener('click', function(){ avisGoTo(-1); });
-  if(avisNextBtn) avisNextBtn.addEventListener('click', function(){ avisGoTo(1); });
+  if(avisPrevBtn) avisPrevBtn.addEventListener('click', function(){ avisGoTo(-1); avisAutoRestart(); });
+  if(avisNextBtn) avisNextBtn.addEventListener('click', function(){ avisGoTo(1); avisAutoRestart(); });
   /* dots cliquables */
   var avisDotsEl = document.getElementById('avisDots');
   if(avisDotsEl){
@@ -2090,6 +2127,7 @@
       if(!dot) return;
       avisPage = parseInt(dot.getAttribute('data-avis-page'), 10) || 0;
       renderAvisPage();
+      avisAutoRestart();
     });
   }
   /* swipe tactile sur mobile */
@@ -2100,13 +2138,19 @@
     avisGridEl.addEventListener('touchend', function(e){
       if(axStart === null) return;
       var dx = e.changedTouches[0].clientX - axStart;
-      if(Math.abs(dx) > 45){ avisGoTo(dx < 0 ? 1 : -1); }
+      if(Math.abs(dx) > 45){ avisGoTo(dx < 0 ? 1 : -1); avisAutoRestart(); }
       axStart = null;
     }, {passive:true});
   }
   /* re-render au changement mobile/desktop */
   var avisMq = window.matchMedia('(max-width: 768px)');
   (avisMq.addEventListener ? avisMq.addEventListener('change', renderAvisPage) : avisMq.addListener(renderAvisPage));
+  var avisCarouselEl = document.querySelector('.avis-carousel');
+  if(avisCarouselEl){
+    avisCarouselEl.addEventListener('mouseenter', avisAutoStop);
+    avisCarouselEl.addEventListener('mouseleave', avisAutoStart);
+  }
+  avisAutoStart();
 
   /* Cookie consent banner */
   (function(){
@@ -2134,6 +2178,8 @@
   route();
   updateSoins();
   updateRail();
+
+  document.querySelectorAll('.footYear').forEach(function(el){ el.textContent = new Date().getFullYear(); });
 
 })();
 </script>
